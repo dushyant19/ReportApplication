@@ -31,7 +31,7 @@ const reportRoutes = require('./routes/reportRoutes');
 app.use('/api/reports', reportRoutes);
 
 //set port, listen for requests
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
 });
